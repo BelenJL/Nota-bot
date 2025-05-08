@@ -8,8 +8,8 @@ import asyncio
 
 load_dotenv()
 TOKEN = os.getenv("TOKEN")
-ID_ASISTENCIA = os.getenv("ID_CANAL_ASISTENCIA ")
-ID_UPDATE = os.getenv("ID_CANAL_UPDATE")
+ID_ASISTENCIA=1369089385810759701
+ID_UPDATE=1369089329753882717
 
 intents = discord.Intents.default()
 intents.message_content = True
