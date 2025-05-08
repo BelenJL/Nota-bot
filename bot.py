@@ -7,7 +7,7 @@ from discord.ext import commands
 import asyncio
 
 load_dotenv()
-TOKEN = os.getenv("DISCORD_TOKEN")
+TOKEN = os.getenv("TOKEN")
 ID_ASISTENCIA = os.getenv("ID_CANAL_ASISTENCIA ")
 ID_UPDATE = os.getenv("ID_CANAL_UPDATE")
 
