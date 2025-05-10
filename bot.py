@@ -18,7 +18,7 @@ intents.members = True
 #client = discord.Client(intents=intents)
 bot = commands.Bot(command_prefix='!', intents=intents)
 
-scheduler = AsyncIOScheduler()
+scheduler = AsyncIOScheduler(timezone=pytz.timezone('America/Mexico_City'))
 
 #@client.event
 @bot.event
@@ -26,7 +26,7 @@ async def on_ready():
     print(f'Bot conectado como {bot.user}')
 
     if not scheduler.running:
-        scheduler.add_job(enviar_recordatorios, 'cron', day_of_week='tue', hour=15, minute=20)
+        scheduler.add_job(enviar_recordatorios, 'cron', day_of_week='fri', hour=18, minute=12)
         scheduler.start()
 
 
