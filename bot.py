@@ -1,5 +1,6 @@
 import discord
 import os
+import pytz
 from dotenv import load_dotenv
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from datetime import datetime
@@ -26,7 +27,7 @@ async def on_ready():
     print(f'Bot conectado como {bot.user}')
 
     if not scheduler.running:
-        scheduler.add_job(enviar_recordatorios, 'cron', day_of_week='fri', hour=18, minute=12)
+        scheduler.add_job(enviar_recordatorios, 'cron', day_of_week='fri', hour=18, minute=15)
         scheduler.start()
 
 
